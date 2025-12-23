@@ -1,0 +1,10 @@
+# Robots.txt for 惦记 (Thinking of You)
+# https://dailyhi.us
+
+User-agent: *
+Allow: /
+Allow: /privacy
+Allow: /terms
+
+# Sitemap
+Sitemap: https://dailyhi.us/sitemap.xml

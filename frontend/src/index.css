@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /* 防止iOS Safari自动调整字体大小 */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  min-height: 100dvh; /* 动态视口高度，适配移动端 */
+  background-color: #f9fafb;
+  /* 防止橡皮筋效果 */
+  overscroll-behavior: none;
+}
+
+/* 移动端触摸优化 */
+button, a, input, select, textarea {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* 确保按钮有足够的触摸区域 */
+button {
+  min-height: 44px;
+}
+
+/* 输入框在iOS上的优化 */
+input, textarea {
+  font-size: 16px; /* 防止iOS自动缩放 */
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/* 隐藏滚动条但保持滚动功能 */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* 安全区域适配 (iPhone X+) */
+.safe-area-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* PWA 全屏时的底部导航适配 */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .nav-safe-area {
+    padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
+  }
+}
+
+/* 图片懒加载占位 */
+img {
+  background-color: #f3f4f6;
+}
+
+/* 平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 防止文本选择（在适当的地方使用） */
+.no-select {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* 活跃状态反馈 */
+.active-scale:active {
+  transform: scale(0.97);
+  transition: transform 0.1s;
+}
+
+/* Toast 动画 */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}

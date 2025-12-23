@@ -1,0 +1,21 @@
+name = "thinkingofyou-api"
+main = "src/index.ts"
+compatibility_date = "2024-12-21"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+APP_NAME = "惦记"
+APP_URL = "https://dailyhi.us"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "dianji-db"
+database_id = "ca3ab545-614b-4e1c-95d4-d0fb6c186c2e"  # npx wrangler d1 create dianji-db
+
+[[r2_buckets]]
+binding = "R2"
+bucket_name = "dianji-media"  # npx wrangler r2 bucket create dianji-media
+
+[[kv_namespaces]]
+binding = "KV"
+id = "adc7260dc6b24c96a7d9ccf363652db9"  # npx wrangler kv namespace create dianji-kv

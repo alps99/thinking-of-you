@@ -1,0 +1,56 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Cloudflare
+.wrangler/
+.dev.vars
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# TypeScript
+*.tsbuildinfo
+
+# Testing
+coverage/
+
+# PWA dev files
+dev-dist/
+
+# Local D1 database
+*.sqlite
+*.sqlite3
+
+# Claude Code
+.claude/
+CLAUDE.md
+
+# Project docs (private)
+惦记App-PRD.md
+惦记App-UI原型-v3.html
+
+# Production env (contains API URL)
+frontend/.env.production
